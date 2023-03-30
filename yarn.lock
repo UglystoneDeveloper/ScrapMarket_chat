@@ -1003,7 +1003,7 @@
     "@types/mime" "^1"
     "@types/node" "*"
 
-"@types/socket.io@^3.0.1":
+"@types/socket.io@^3.0.2":
   "integrity" "sha512-pu0sN9m5VjCxBZVK8hW37ZcMe8rjn4HHggBN5CbaRTvFwv5jOmuIRZEuddsBPa9Th0ts0SIo3Niukq+95cMBbQ=="
   "resolved" "https://registry.npmjs.org/@types/socket.io/-/socket.io-3.0.2.tgz"
   "version" "3.0.2"
