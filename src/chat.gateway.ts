@@ -3,11 +3,7 @@ import { MessageBody, SubscribeMessage, WebSocketGateway, WebSocketServer , Conn
 
 
 
-@WebSocketGateway({
-  cors: {
-  origin: ['http://localhost:8080'],
-},
-})
+@WebSocketGateway()
 export class ChatGateway {
   @WebSocketServer()
   server;
