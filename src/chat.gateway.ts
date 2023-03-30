@@ -1,11 +1,7 @@
 import { MessageBody, SubscribeMessage, WebSocketGateway, WebSocketServer , ConnectedSocket  } from "@nestjs/websockets";
 import { Socket } from "socket.io";
 
-@WebSocketGateway({ 
-  cors: {
-    origin: ['http://172.30.1.84:8080/'],
-  },
- })
+@WebSocketGateway()
 export class ChatGateway {
   @WebSocketServer()
   server;
