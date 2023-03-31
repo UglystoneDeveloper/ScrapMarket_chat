@@ -12,6 +12,7 @@ export class ChatGateway {
   @WebSocketServer()
   server;
 
+  // 실시간 채팅 Communication
   @SubscribeMessage('message')
   handleMessage(
     @MessageBody() message: string,
@@ -20,16 +21,14 @@ export class ChatGateway {
     this.server.to(message.split("방이름")[1]).emit('message', message);
   }
 
-  
+
+  // 채팅방 생성
   @SubscribeMessage('room')
   createroom(
     @MessageBody() room: string,
-    @ConnectedSocket() client: Socket, // -> 문제되는부분
+    @ConnectedSocket() client: Socket,
     ): 
   void {
     client.join(room)
-    // console.log(message.split("방이름")[1] + "입장")
-    // this.server.to(message.split("방이름")[1]).emit('message', message);
-    // this.server.emit('message', message);
   }
 }
