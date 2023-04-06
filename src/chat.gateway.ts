@@ -8,6 +8,7 @@ import { Socket } from "socket.io";
     origin:'*'
   }
 })
+
 export class ChatGateway {
   @WebSocketServer()
   server;
@@ -30,5 +31,6 @@ export class ChatGateway {
     ): 
   void {
     client.join(room)
+    console.log(room + "이 생성되었습니다.")
   }
 }
